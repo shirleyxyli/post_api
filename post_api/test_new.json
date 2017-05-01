@@ -1,0 +1,58 @@
+{
+	"id": "25ca85e7-bda7-4c98-ad7d-cec8b9aa7bef",
+	"name": "test_new",
+	"description": "",
+	"order": [
+		"889463fc-03db-a59c-d217-bd71865a8aca",
+		"d9f49ef9-a0f4-0c94-0be0-5db60b78d758"
+	],
+	"folders": [],
+	"timestamp": 1493623177095,
+	"owner": "",
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "889463fc-03db-a59c-d217-bd71865a8aca",
+			"headers": "Content-Type: application/json\n",
+			"url": "www.cepin.com/WebApi5/User/UserLogin",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "25ca85e7-bda7-4c98-ad7d-cec8b9aa7bef",
+			"data": [],
+			"dataMode": "raw",
+			"name": "登录",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1493623418725,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n  \"Account\": \"13249798856\",\n  \"Password\": \"123456\",\n  \"RememberMe\": \"true\",\n  \"SourceType\": \"0\"\n}"
+		},
+		{
+			"id": "d9f49ef9-a0f4-0c94-0be0-5db60b78d758",
+			"headers": "Content-Type: application/json\n",
+			"url": "www.cepin.com/WebApi5/User/UserLogin",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "25ca85e7-bda7-4c98-ad7d-cec8b9aa7bef",
+			"data": [],
+			"dataMode": "raw",
+			"name": "登录并检验",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1493623944836,
+			"version": 2,
+			"responses": [],
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"Message\"] = jsonData.Message === \"登录成功\";\ntests[\"UserId\"]= jsonData.Data.UserId ===\"28948c9d-3705-4331-809b-eb4095b8df67\";",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n  \"Account\": \"13249798855\",\n  \"Password\": \"123456\",\n  \"RememberMe\": \"true\",\n  \"SourceType\": \"0\"\n}"
+		}
+	]
+}
